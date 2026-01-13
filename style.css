@@ -1,0 +1,490 @@
+:root {
+    --primary: #d32f2f;
+    --gold: #ffca28;
+    --bg-gradient: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-gradient);
+    color: #333;
+    overflow-x: hidden;
+}
+
+.brand-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.brand-logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    text-align: center;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+h1 {
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-weight: 600;
+    color: #555;
+}
+
+/* --- 1. HIỆU ỨNG QUẠT (CỐ ĐỊNH SIZE & ANIMATION MƯỢT) --- */
+.showcase-container {
+    min-height: 850px;
+    /* Đủ cao để chứa quạt khi xòe */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+    /* Cách header một đoạn */
+    perspective: 1500px;
+    margin-bottom: 20px;
+}
+
+.fan-wrapper {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    transition: transform 0.5s ease;
+    transform: rotateX(0deg);
+    z-index: 10;
+}
+
+.fan-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transform-origin: bottom center;
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    background: white;
+    border: 1px solid #eee;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.fan-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-1 {
+    transform: rotate(-45deg) translate(-140px, 60px);
+    z-index: 1;
+}
+
+.card-2 {
+    transform: rotate(-25deg) translate(-70px, 15px);
+    z-index: 2;
+}
+
+.card-3 {
+    transform: rotate(-8deg) translate(-15px, -10px);
+    z-index: 3;
+}
+
+.card-4 {
+    transform: rotate(8deg) translate(15px, -10px);
+    z-index: 4;
+}
+
+.card-5 {
+    transform: rotate(25deg) translate(70px, 15px);
+    z-index: 5;
+}
+
+.card-6 {
+    transform: rotate(45deg) translate(140px, 60px);
+    z-index: 6;
+}
+
+/* Hiệu ứng khi rê chuột vào bao lì xì (Chỉ hoạt động khi ĐANG XÒE) */
+.fan-wrapper:not(.closed) .fan-card:hover {
+    z-index: 100 !important;
+    transform: scale(1.05) translateY(-30px) !important;
+    box-shadow: 0 30px 60px rgba(211, 47, 47, 0.4);
+}
+
+.fan-wrapper:not(.closed) .card-1:hover {
+    transform: rotate(-45deg) scale(1.05) translateY(-30px);
+}
+
+.fan-wrapper:not(.closed) .card-2:hover {
+    transform: rotate(-25deg) scale(1.05) translateY(-30px);
+}
+
+.fan-wrapper:not(.closed) .card-3:hover {
+    transform: rotate(-8deg) scale(1.05) translateY(-30px);
+}
+
+.fan-wrapper:not(.closed) .card-4:hover {
+    transform: rotate(8deg) scale(1.05) translateY(-30px);
+}
+
+.fan-wrapper:not(.closed) .card-5:hover {
+    transform: rotate(25deg) scale(1.05) translateY(-30px);
+}
+
+.fan-wrapper:not(.closed) .card-6:hover {
+    transform: rotate(45deg) scale(1.05) translateY(-30px);
+}
+
+
+.fan-wrapper.closed .fan-card {
+    transform: rotate(0deg) translate(0, 0) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fan-wrapper.closed .fan-card:hover {
+    transform: translateY(-10px) !important;
+}
+
+
+.guide-text {
+    margin-top: 30px;
+    font-style: italic;
+    color: #888;
+    pointer-events: none;
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.pricing-section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pricing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.price-card {
+    padding: 30px 20px;
+    border-radius: 20px;
+    width: 250px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-10px);
+}
+
+.popular {
+    background: #fffcfc;
+    border: 2px solid var(--primary);
+}
+
+.best-deal {
+    background: #fffde7;
+    border: 2px solid var(--gold);
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.best-deal .badge {
+    background: var(--gold);
+    color: #333;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin: 10px 0;
+}
+
+.save-text {
+    color: green;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.btn-select {
+    margin-top: 15px;
+    padding: 10px 25px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-select:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.popular .btn-select {
+    background: var(--primary);
+}
+
+.best-deal .btn-select {
+    background: #fbc02d;
+    color: #333;
+}
+
+/* Modal & iOS Animation */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    transition: background-color 0.5s ease;
+}
+
+.modal.visible {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.modal-content {
+    width: 95%;
+    max-width: 1000px;
+    height: 650px;
+    background: white;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.modal-body {
+    display: flex;
+    height: 100%;
+}
+
+.modal-img-box {
+    flex: 1;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.modal-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-info {
+    flex: 1.2;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-info h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.story-text {
+    font-style: italic;
+    background: #fff5f5;
+    padding: 20px;
+    border-radius: 12px;
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.1rem;
+    border-left: 5px solid var(--primary);
+}
+
+.tech-specs {
+    margin-top: 20px;
+}
+
+.tech-specs p {
+    margin: 15px 0;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10;
+    color: #333;
+    background: rgba(255, 255, 255, 0.9);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg);
+    color: var(--primary);
+}
+
+/* Contact Modal */
+.contact-modal-wrapper {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.contact-content {
+    height: auto;
+    padding: 40px;
+    text-align: center;
+    max-width: 450px;
+    opacity: 1;
+    transform: scale(1);
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.contact-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.contact-buttons button:active {
+    transform: scale(0.95);
+}
+
+.contact-buttons img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.btn-zalo {
+    background: #0068ff;
+}
+
+.btn-fb {
+    background: #1877f2;
+}
+
+@media (max-width: 768px) {
+    .fan-wrapper {
+        transform: scale(0.55);
+        margin-top: -100px;
+        margin-bottom: -100px;
+    }
+
+    .showcase-container {
+        height: 500px;
+    }
+
+    .modal-content {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        overflow-y: auto;
+    }
+
+    .modal-body {
+        flex-direction: column;
+    }
+
+    .modal-img-box {
+        height: 400px;
+        flex: none;
+    }
+
+    .modal-info {
+        padding: 20px;
+        flex: none;
+    }
+}

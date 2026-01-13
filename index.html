@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiệm Lì Xì Ngựa Thêu - Tết 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="brand-logo">
+        <img src="weblixi/logo.jpg" alt="Logo Shop">
+    </div>
+
+    <header>
+        <h1>🧧 Bộ Sưu Tập "Ngựa Gấm Thêu Hoa"</h1>
+        <p class="subtitle">Một Set bao gồm 6 thiết kế độc bản - Tết Bính Ngọ 2026</p>
+    </header>
+
+    <section class="showcase-container">
+        <div class="fan-wrapper" id="fanWrapper">
+            <div id="card-1" class="fan-card card-1" onclick="openIOSModal(1)"><img src="weblixi/bao1.jpg"></div>
+            <div id="card-2" class="fan-card card-2" onclick="openIOSModal(2)"><img src="weblixi/bao2.jpg"></div>
+            <div id="card-3" class="fan-card card-3" onclick="openIOSModal(3)"><img src="weblixi/bao3.jpg"></div>
+            <div id="card-4" class="fan-card card-4" onclick="openIOSModal(4)"><img src="weblixi/bao4.jpg"></div>
+            <div id="card-5" class="fan-card card-5" onclick="openIOSModal(5)"><img src="weblixi/bao5.jpg"></div>
+            <div id="card-6" class="fan-card card-6" onclick="openIOSModal(6)"><img src="weblixi/bao6.jpg"></div>
+        </div>
+        <p class="guide-text">Chạm vào bao lì xì để xem chi tiết</p>
+    </section>
+
+    <section class="pricing-section">
+        <h2 class="section-title">✨ Bảng Giá Ưu Đãi ✨</h2>
+        <div class="pricing-grid">
+            <div class="price-card glass-effect">
+                <h3>Thử Vận May</h3>
+                <div class="price">19.000đ</div>
+                <p>1 Set (6 cái)</p>
+                <button class="btn-select" onclick="selectPackage(1, '19.000')">Chọn Mua</button>
+            </div>
+            
+            <div class="price-card glass-effect popular">
+                <div class="badge">Phổ Biến</div>
+                <h3>Lộc Đôi</h3>
+                <div class="price">36.000đ</div>
+                <p>2 Set (12 cái)</p>
+                <p class="save-text">Tiết kiệm 2k</p>
+                <button class="btn-select" onclick="selectPackage(2, '36.000')">Chọn Mua</button>
+            </div>
+
+            <div class="price-card glass-effect best-deal">
+                <div class="badge">Siêu Hời</div>
+                <h3>Phát Tài</h3>
+                <div class="price">89.000đ</div>
+                <p>5 Set (30 cái)</p>
+                <p class="save-text">Tiết kiệm 6k</p>
+                <button class="btn-select" onclick="selectPackage(5, '89.000')">Chọn Mua</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content glass-effect" id="modalContent">
+            <span class="close-btn" onclick="closeIOSModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-img-box">
+                    <img id="modal-img" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title">Tiêu đề</h2>
+                    <p id="modal-story" class="story-text">Nội dung...</p>
+                    <div class="tech-specs">
+                        <p>📏 <strong>Kích thước:</strong> 8x16cm (Chuẩn form)</p>
+                        <p>🎨 <strong>Màu sắc:</strong> <span id="modal-color">Đỏ</span></p>
+                        <p>🧵 <strong>Chất liệu:</strong> Giấy Kraft Nhật / Gấm thêu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal contact-modal-wrapper">
+        <div class="modal-content glass-effect contact-content">
+            <span class="close-btn" onclick="closeContactModal()">&times;</span>
+            <h3>Xác nhận đặt hàng</h3>
+            <p id="order-summary">Bạn đang chọn mua...</p>
+            <div class="contact-buttons">
+                <button class="btn-zalo" onclick="contactZalo()">
+                    <img src="weblixi/logozalo.jpg" alt="Zalo"> Chat Zalo
+                </button>
+                <button class="btn-fb" onclick="contactFacebook()">
+                    <img src="weblixi/logofacebook.jpg" alt="Facebook"> Chat Facebook
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
