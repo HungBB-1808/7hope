@@ -95,7 +95,7 @@ function closeIOSModal() {
     anim.onfinish = () => { modal.style.display = 'none'; activeCardId = null; };
 }
 
-const SHOP_INFO = { zalo: "0778617384", facebook: "profile.php?id=61586564726732" };
+const SHOP_INFO = { zalo: "0778617384", facebook: "61586564726732" };
 function selectPackage(sets, priceStr) {
     selectedPackage = { quantity: sets, price: priceStr };
     const modal = document.getElementById('contactModal');
