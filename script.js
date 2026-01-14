@@ -1,10 +1,10 @@
 const envelopeStories = [
-    { id: 1, title: "Tiền Vô Như Nước", color: "Đỏ Đậm", story: "Họa tiết sóng nước cuộn trào tượng trưng cho tài lộc dồi dào, chảy mãi không ngừng vào túi gia chủ." },
-    { id: 2, title: "Ngựa Hồng May Mắn", color: "Hồng Phấn", story: "Chú ngựa hồng mang nụ cười tươi tắn, đại diện cho tình duyên phơi phới và niềm vui nhỏ bé mỗi ngày." },
-    { id: 3, title: "Đại Cát Đại Lợi", color: "Đỏ Tươi", story: "Câu chúc kinh điển kết hợp với hình tượng ngựa thần tài, mang lại may mắn lớn trong công việc làm ăn." },
-    { id: 4, title: "Vạn Sự Như Ý", color: "Xanh Dương", story: "Màu xanh của hy vọng và bình yên. Mọi dự định trong năm mới sẽ trôi chảy, thuận buồm xuôi gió." },
-    { id: 5, title: "Túi Vàng Rủng Rỉnh", color: "Đỏ Cam", story: "Hình ảnh túi vàng căng tràn, lời chúc thực tế nhất cho một năm kinh tế vững vàng, tiêu xài không lo nghĩ." },
-    { id: 6, title: "Ấm Áp Len Dệt", color: "Kem / Be", story: "Chất liệu len gợi nhớ sự sum vầy, ấm áp bên gia đình. Một cái Tết không chỉ giàu có mà còn đầy tình thân." }
+    { id: 1, title: "Tiền Vô Như Nước", color: "Đỏ Đậm", story: "Mở bát cho một năm mới tài lộc dồi dào với chú ngựa thêu sắc sảo trên nền đỏ truyền thống. Điểm nhấn là lời chúc 'Tiền Vô Như Nước' - món quà tinh thần không thể thiếu dành tặng đối tác và người thân để cầu chúc một năm tài chính thịnh vượng, tiền vào không ngừng nghỉ." },
+    { id: 2, title: "Ngựa Hồng May Mắn", color: "Hồng Phấn", story: "Một thiết kế 'đốn tim' các bạn nhỏ và những cô nàng yêu thích sự ngọt ngào. Chất liệu lông nhung mềm mượt bao phủ lấy chú ngựa nhỏ xinh, mang đến cảm giác cao cấp và khác biệt hoàn toàn so với bao giấy thông thường. Đây chính là tấm vé mang niềm vui và sự ấm áp đến mọi nhà." },
+    { id: 3, title: "Đại Cát Đại Lợi", color: "Đỏ Tươi", story: "Chú ngựa trắng thêu nổi bật giữa những áng mây và chữ 'Phúc', 'Lộc' cổ điển. Mẫu bao lì xì này toát lên vẻ sang trọng, mang ý nghĩa mọi việc đều suôn sẻ, gặp dữ hóa lành, đón nhận đại cát đại lợi. Một lựa chọn tinh tế để thay lời chúc bình an." },
+    { id: 4, title: "Vạn Sự Như Ý", color: "Xanh Dương", story: "Sự kết hợp phá cách giữa chú ngựa hồng và nền lông xanh pastel tạo nên một tổng thể vô cùng hiện đại và bắt mắt. 'Vạn Sự Như Ý' không chỉ là lời chúc, mà còn là mong ước cho một năm mới tràn đầy hy vọng và những khởi đầu mới mẻ, thành công rực rỡ." },
+    { id: 5, title: "Túi Vàng Rủng Rỉnh", color: "Đỏ Cam", story: "Hình ảnh chú ngựa khỏe khoắn thồ trên lưng túi tiền vàng trĩu nặng là biểu tượng của sự no đủ. Mẫu bao lì xì này như một lời hứa hẹn về một năm mới gặt hái được nhiều thành quả, công việc kinh doanh thuận lợi, 'mã' tới đâu là 'lộc' theo tới đó." },
+    { id: 6, title: "Ấm Áp Len Dệt", color: "Kem / Be", story: "Với tông màu kem nhã nhặn và kỹ thuật thêu tỉ mỉ, mẫu bao lì xì này mang phong cách vintage sang trọng. Dành cho những ai thích sự tối giản nhưng vẫn đầy đẳng cấp. Chú ngựa nhỏ trên nền vải dệt sẽ là món quà lưu giữ kỷ niệm khó quên trong lòng người nhận." }
 ];
 
 const cardRotations = [-45, -25, -8, 8, 25, 45];
